@@ -1,0 +1,5 @@
+/web-app/userLibs/
+/test/unit/
+/test/integration/
+/.idea/
+/.slcache/
