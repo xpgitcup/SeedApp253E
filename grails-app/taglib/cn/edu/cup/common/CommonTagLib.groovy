@@ -48,7 +48,6 @@ class CommonTagLib {
     
     /*2015.02.05
      * 生成树形结构的显示
-     * 
      * */
     def treeViewA = {attrs->
         def objects = attrs.objects
@@ -79,6 +78,11 @@ class CommonTagLib {
     def nativeCode = {attrs, body->
         def object = attrs.object
         def method = attrs.method
-        out << object.metaClass.invokeMethod(object, method)
+        def ps = Integer.parseInt(attrs.parameter)
+        if (ps) {
+            out << object.metaClass.invokeMethod(object, method, ps)
+        } else {
+            out << object.metaClass.invokeMethod(object, method)
+        }
     }
 }
