@@ -53,7 +53,7 @@
                             <td><g:link action="show" id="${systemMenuInstance.id}">${fieldValue(bean: systemMenuInstance, field: "menuContext")}</g:link></td>
 
                             <td>
-                                <g:nativeCode object="${systemMenuInstance}" method="currentTree">
+                                <g:nativeCode object="${systemMenuInstance}" method="treeViewString" parameter="9">
                                 </g:nativeCode>
                             </td>
 
